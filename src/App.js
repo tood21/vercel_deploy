@@ -10,7 +10,7 @@ function App() {
   // TagManager.initialize(tagManagerArgs);
   return (
     <div className="App">
-      <GoogleTagManager gtmId="G-FPJGQ79PSH" />
+      <GoogleTagManager gtmId="GTM-MMZ2BT99" />
       <h1>안녕하세요. 버셀 배포 테스트입니다.</h1>
       <p>변경1</p>
       <iframe src="https://innerpage-iframe.vercel.app/" frameborder="0"></iframe>
