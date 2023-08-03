@@ -1,13 +1,10 @@
 import './App.css';
 import GoogleTagManager from "./componets/GoogleTagManager";
-// import TagManager from 'react-gtm-module';
+import {Link, Route, Routes} from "react-router-dom";
+import Main from "./pages/Main";
+import Sub from "./pages/Sub";
 
 function App() {
-  // const tagManagerArgs = {
-  //   gtmId: 'G-FPJGQ79PSH'
-  // }
-  //
-  // TagManager.initialize(tagManagerArgs);
   return (
     <div className="App">
       <GoogleTagManager gtmId="GTM-MMZ2BT99" />
@@ -15,6 +12,17 @@ function App() {
       <p>변경1</p>
       <iframe src="https://innerpage-iframe.vercel.app/" frameborder="0"></iframe>
       <a href="https://market.bankbe.im/user/sign-up">하이픈 가입페이지로</a>
+      <nav style={{display:'flex', justifyContent: 'center', border: '1px solid black', padding: '10px', marginTop: '50px'}}>
+        <div style={{width: '50%', display: 'flex', justifyContent: 'space-between'}}>
+          <Link to={'/main'}>메인</Link>
+          <Link to={'/sub'}>서브</Link>
+        </div>
+
+      </nav>
+      <Routes>
+        <Route path='/main' element={<Main />} />
+        <Route path='/sub' element={<Sub />} />
+      </Routes>
     </div>
   );
 }

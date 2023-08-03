@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import { RecoilRoot } from "recoil";
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <RecoilRoot>
-    <App />
-  </RecoilRoot>
+  <BrowserRouter>
+    <RecoilRoot>
+      <App />
+    </RecoilRoot>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
