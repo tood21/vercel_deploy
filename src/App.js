@@ -3,8 +3,12 @@ import GoogleTagManager from "./componets/GoogleTagManager";
 import {Link, Route, Routes} from "react-router-dom";
 import Main from "./pages/Main";
 import Sub from "./pages/Sub";
+import ReactGA from 'react-ga4';
+
 
 function App() {
+  const measurementId = 'G-T6H9MD32BH';
+  ReactGA.initialize(measurementId);
   return (
     <div className="App">
       <GoogleTagManager gtmId="GTM-T22M3WCP" />
