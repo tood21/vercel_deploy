@@ -7,8 +7,6 @@ import ReactGA from 'react-ga4';
 
 
 function App() {
-  const measurementId = 'G-T6H9MD32BH';
-  ReactGA.initialize(measurementId);
   return (
     <div className="App">
       <GoogleTagManager gtmId="GTM-T22M3WCP" />
@@ -21,7 +19,6 @@ function App() {
           <Link to={'/main'}>메인</Link>
           <Link to={'/sub'}>서브</Link>
         </div>
-
       </nav>
       <Routes>
         <Route path='/main' element={<Main />} />
